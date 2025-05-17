@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descubre Portobelo</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #001f54; /* azul marino */
+    }
+    .navbar {
+      background-color: #001f54;
+    }
+    .navbar-brand, .nav-link {
+      color: #ffffff !important;
+    }
+    .btn-primary {
+      background-color: #c8102e; /* rojo bandera */
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #a00c24;
+    }
+    footer {
+      background-color: #001f54;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1589820873601-9c574d73e4f9?auto=format&fit=crop&w=1350&q=80') center/cover;
+      height: 60vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    #map {
+      width: 100%;
+      height: 60vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Descubre Portobelo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia y Cultura</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ruta">Ruta de la Gira</a></li>
+          <li class="nav-item"><a class="nav-link" href="#demografia">Demografía y Clima</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mapa">Mapa Interactivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#creditos">Acerca / Créditos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1 class="mb-3">Portobelo, historia viva frente al mar</h1>
+      <a href="#historia" class="btn btn-primary">Explorar</a>
+    </div>
+  </section>
+
+  <!-- Historia y Cultura -->
+  <section class="py-5" id="historia">
+    <div class="container">
+      <h2 class="mb-4">Historia y Cultura</h2>
+      <p>Portobelo fue fundado en 1597 y sirvió como uno de los puertos más importantes del Imperio Español. Su riqueza cultural incluye el famoso Festival del Cristo Negro y las fortificaciones coloniales declaradas Patrimonio de la Humanidad.</p>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="py-5 bg-light" id="galeria">
+    <div class="container">
+      <h2 class="mb-4">Galería</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ruta de la gira académica -->
+  <section class="py-5" id="ruta">
+    <div class="container">
+      <h2 class="mb-4">Ruta de la Gira Académica</h2>
+      <ol>
+        <li>Fuerte de San Jerónimo – Fortificación histórica que protegía la bahía.</li>
+        <li>Iglesia de San Felipe – Hogar del Cristo Negro.</li>
+        <li>Casa de la Aduana – Centro de comercio colonial.</li>
+        <li>Museo de Portobelo – Exhibiciones sobre la historia local.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Demografía y Clima -->
+  <section class="py-5 bg-light" id="demografia">
+    <div class="container">
+      <h2 class="mb-4">Demografía y Clima</h2>
+      <p>Población estimada (2025): 4,100 habitantes. Clima tropical lluvioso con una temperatura media de 26 °C.</p>
+    </div>
+  </section>
+
+  <!-- Mapa Interactivo -->
+  <section class="py-5" id="mapa">
+    <div class="container">
+      <h2 class="mb-4">Mapa Interactivo</h2>
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <!-- Créditos -->
+  <footer id="creditos">
+    <div class="container text-center">
+      <p>© 2025 Proyecto Descubre Portobelo – Estudiantes de la Universidad XYZ. Docente guía: Prof. Juan Pérez.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS & dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Google Maps API (replace YOUR_API_KEY) -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script>
+    function initMap() {
+      const portobelo = { lat: 9.5534, lng: -79.6550 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: portobelo,
+      });
+
+      const locations = [
+        { position: { lat: 9.3575, lng: -79.9011 }, title: 'Zona Libre de Colón', url: 'https://es.wikipedia.org/wiki/Zona_Libre_de_Col%C3%B3n' },
+        { position: { lat: 9.3585, lng: -79.8998 }, title: 'Puerto de Colón 2000', url: 'https://es.wikipedia.org/wiki/Col%C3%B3n_2000' },
+        { position: { lat: 9.5564, lng: -79.6583 }, title: 'Fuerte de San Jerónimo', url: 'https://es.wikipedia.org/wiki/Fuerte_de_San_Jer%C3%B3nimo' },
+      ];
+
+      locations.forEach(loc => {
+        const marker = new google.maps.Marker({
+          position: loc.position,
+          map,
+          title: loc.title,
+        });
+        marker.addListener('click', () => {
+          window.open(loc.url, '_blank');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
